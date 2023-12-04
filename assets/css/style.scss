@@ -71,7 +71,9 @@ header {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
-    padding-inline: 1rem;
+    padding-inline: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .nav-list {
@@ -98,12 +100,26 @@ header {
 
 main{
     padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .pokemon-todos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+@media screen and (min-width: 470px){
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 700px){
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr 1fr;
+}
 }
 
 .pokemon{
@@ -148,6 +164,37 @@ main{
     text-align: center;
 }
 
+.pokemon-id{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-nombre{
+    font-size: 1.4rem;
+}
+
+.pokemon-tipos{
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tipo{
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats{
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
 
 .nombre-contenedor{
     display: flex;
@@ -156,6 +203,13 @@ main{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.stat{
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
 
 /* Aquí comienzan los colores de botones según tipo */
 .normal {
